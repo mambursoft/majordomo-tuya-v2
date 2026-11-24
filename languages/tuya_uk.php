@@ -72,3 +72,10 @@ $dictionary=array(
 );
 
 foreach ($dictionary as $k=>$v) { if (!defined("LANG_".$k)) { define("LANG_".$k, $v); } }
+
+if (!defined('LANG_TUYA_MANUAL')) define('LANG_TUYA_MANUAL', 'Мануал');
+if (!defined('LANG_TUYA_MANUAL_TEXT')) define('LANG_TUYA_MANUAL_TEXT', 'Instruction is available below.');
+if (!defined('LANG_TUYA_MANUAL_STEP1')) define('LANG_TUYA_MANUAL_STEP1', 'Save changes after validation only.');
+if (!defined('LANG_TUYA_MANUAL_STEP2')) define('LANG_TUYA_MANUAL_STEP2', 'Сохраняйте изменения только после проверки.');
+if (!defined('LANG_TUYA_MANUAL_STEP3')) define('LANG_TUYA_MANUAL_STEP3', 'Зберігайте зміни тільки після перевірки.');
+if (!defined('LANG_TUYA_MANUAL_FULL')) define('LANG_TUYA_MANUAL_FULL', 'Повний мануал');

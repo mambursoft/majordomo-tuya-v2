@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+ <name>tuya</name>
+ <title>Tuya v2</title>
+ <title_ru>Tuya v2</title_ru>
+ <category>devices</category>
+ <author>mambursoft</author>
+ <url>https://github.com/mambursoft/majordomo-tuya-v2</url>
+ <version>2.0.0</version>
+ <description>Tuya cloud/local integration for MajorDoMo without external processes, with validated config and responsive UI.</description>
+ <description_ru>Tuya cloud/local integration for MajorDoMo without external processes, with validated config and responsive UI.</description_ru>
+ <support>https://github.com/mambursoft/majordomo-tuya-v2/issues</support>
+ <requires></requires>
+</module>

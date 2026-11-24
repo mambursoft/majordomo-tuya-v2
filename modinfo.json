@@ -1,0 +1,14 @@
+{
+  "name": "tuya",
+  "title": "Tuya v2",
+  "module_name": "tuya",
+  "version": "2.0.0",
+  "category": "devices",
+  "author": "mambursoft",
+  "support": "https://github.com/mambursoft/majordomo-tuya-v2/issues",
+  "repository": "https://github.com/mambursoft/majordomo-tuya-v2",
+  "min_php": "7.3",
+  "tested_php": "8.2",
+  "description": "Tuya cloud/local integration for MajorDoMo without external processes, with validated config and responsive UI.",
+  "languages": ["en", "ru", "uk"]
+}

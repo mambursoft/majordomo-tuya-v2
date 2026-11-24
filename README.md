@@ -1,11 +1,46 @@
-Модуль работающий с устройствами Tuya для системы умного дома Majordomo https://mjdm.ru/. Кроме собственно устройств поддерживаюся пульты и смарт-сцены
+# Tuya v2
 
-Модуль работает с устройствами 3 способами
+Experimental v2 package prepared by mambursoft. Published separately from the original module because the current upstream implementation needs architectural changes.
 
-1. Через облако для HA. Самый первый способ, появившийся в модуле, на данный момент не актуален в связи со слишком большим перидом опроса - минимум 12 минут
-2. Через родное облако, испольузя тот же протокол, что и смартфоны. Спасибо авторам с https://github.com/TuyaAPI/cloud
-3. Локальное управление
-4. Экспериментальное управление, используя учётку на IOT платформе https://developer.tuya.com/en/docs/iot/Configuration_Guide_custom?id=Kamcfx6g5uyot
-Спасибо авторам MQTT клиента - https://github.com/McFizh/libMQTT  
- 
-Для того чтобы модуль работал нужно, чтобы было установлено расширение  php-bcmath, в убунту или дебиан sudo apt install php-bcmath, в windows оно уже есть по умолчанию
+## Status
+
+- separate package, not a drop-in update for the original module;
+- install instead of the original module, not alongside it;
+- upstream proposal: https://github.com/sergejey/majordomo/issues/1361
+
+## Architecture
+
+1. Presentation layer: templates and CSS tokens, responsive layouts, 44 px touch targets.
+2. Application layer: module class coordinates search/edit screens and delegates to services.
+3. Domain layer: device/topic services, config validation, queue handling.
+4. Infrastructure layer: transport clients (HTTP/MQTT/UDP) and persistence.
+
+No external processes are used for cryptographic or cloud operations.
+
+## Installation
+
+Download the tar.gz archive from the repository releases or use the marketplace package URL. Copy the contents into the MajorDoMo root, then open Control Panel and enable the module.
+
+## Interface manual
+
+Open Control Panel -> Tuya v2 -> Manual. The same manual is available at `docs/MANUAL.md` in the package.
+
+## Localization
+
+Languages: English (default/en), Russian (ru), Ukrainian (ua/uk).
+
+## Integration
+
+Use standard MajorDoMo calls, for example:
+
+`
+callAPI('/api/module/tuya', 'GET', array('op' => 'status'));
+`
+
+See `docs/MANUAL.md` for module-specific examples.
+
+## Verification
+
+- PHP 7.3+ syntax checks;
+- light/dark theme and 375/1440 px layouts checked in Docker;
+- no CDN requests, no shell executors for cloud/crypto operations.
