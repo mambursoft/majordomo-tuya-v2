@@ -156,7 +156,7 @@ class tuya extends module
 
 
       $out['TUYA_USERNAME'] = $this->config['TUYA_USERNAME'];
-      $out['TUYA_PASSWD'] = $this->config['TUYA_PASSWD'];
+      // Password is never exposed to the template.
       $out['TUYA_INTERVAL'] = $this->config['TUYA_INTERVAL'];
       $out['TUYA_LOCAL_INTERVAL'] = $this->config['TUYA_LOCAL_INTERVAL'];
       $out['TUYA_LOCAL_IP'] = $this->config['TUYA_LOCAL_IP'];
